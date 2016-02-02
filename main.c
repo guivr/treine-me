@@ -21,7 +21,7 @@ int main()
     int r, i, opcao, exerc, limite;
     a=e=limite=exerc=0;
     srand(time(NULL));
-    printf("\n\n|------------------------------|\n| Teste.me  -  Guilherme Rizzo |\n|------------------------------|");
+    printf("\n\n|------------------------------|\n| Treine.me  -  Guilherme Rizzo |\n|------------------------------|");
     printf("\n\nSelecione o tipo de operacao que voce deseja treinar:\n");
     printf("1.\tSoma\n2.\tSubtracao\n3.\tMultiplicacao\n4.\tDivisao\n5.\tPotenciacao\n6.\tRaiz quadrada\n7. \tSair\n\n");
     scanf("%d", &opcao);
