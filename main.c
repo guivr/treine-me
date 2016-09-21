@@ -26,7 +26,7 @@ int main()
     printf("1.\tSoma\n2.\tSubtracao\n3.\tMultiplicacao\n4.\tDivisao\n5.\tPotenciacao\n6.\tRaiz quadrada\n7. \tSair\n\n");
     scanf("%d", &opcao);
 
-    if (opcao >= 8 && opcao <= 0){
+    if (opcao >= 8 || opcao <= 0){
         printf("Opcao invalida.");
     }
 
