@@ -28,107 +28,101 @@ int main()
 
     if (opcao >= 8 || opcao <= 0){
         printf("Opcao invalida.");
-    }
-
-    else if(opcao == 1){ //soma
+    } else if (opcao == 1){ //soma
         requerirDadosExc(&limite, &exerc);
-        for(i=0; i<exerc; i++){
+        
+        for (i = 0; i < exerc; i++){
             gerarNumsAleatorios(limite);
             printf("\n\nQual a soma de %d + %d (para parar, digite -1)\n", x, y);
             scanf("%d", &r);
-            if(r == -1){
-                if(a==0 && e==0){
+            
+            if (r == -1){
+                if (a == 0 && e == 0){
                     main();
-                }
-                else{
+                } else {
                     break;
                 }
-            }
-            else{
+            } else {
                 r == x+y ? acertou():errou();
             }
         }
+        
         msgFinal(a,e);
         main();
-    }
-
-    else if(opcao==2){ //subtracao
+    } else if (opcao == 2){ //subtracao
         requerirDadosExc(&limite, &exerc);
-        for(i=0; i<exerc; i++){
+        
+        for (i = 0; i < exerc; i++){
             gerarNumsAleatorios(limite);
             printf("\n\nQual a subtracao de %d - %d (para parar, digite -123)\n", x, y);
             scanf("%d", &r);
-            if(r == -123){
-                if(a==0 && e==0){
+            
+            if (r == -123){
+                if (a==0 && e==0){
                     main();
-                }
-                else{
+                } else {
                     break;
-                }
-            }
-            else{
-                r == x-y ? acertou():errou();
+                } 
+            } else {
+                r == x-y ? acertou() : errou();
             }
         }
+        
         msgFinal(a,e);
         main();
-    }
-
-    else if(opcao==3){ //multiplicacao
+    } else if (opcao == 3){ //multiplicacao
         requerirDadosExc(&limite, &exerc);
-        for(i=0; i<exerc; i++){
+        
+        for(i = 0; i < exerc; i++){
             gerarNumsAleatorios(limite);
             printf("\n\nQual a multiplicacao de %d * %d (para parar, digite -1)\n", x, y);
             scanf("%d", &r);
-            if(r == -1){
-                if(a==0 && e==0){
+            
+            if (r == -1) {
+                if (a == 0 && e == 0) {
                     main();
-                }
-                else{
+                } else {
                     break;
                 }
-            }
-            else{
-                r == x*y ? acertou():errou();
+            } else {
+                r == x*y ? acertou() : errou();
             }
         }
+        
         msgFinal(a,e);
         main();
-    }
-
-    else if(opcao==4){ //divisao
+    } else if(opcao == 4){ //divisao
         requerirDadosExc(&limite, &exerc);
-        for(i=0; i<exerc; i++){
+        
+        for (i = 0; i < exerc; i++){
             gerarNumsAleatorios(limite);
             printf("\n\nQual a divisao de %d / %d (para parar, digite -1)\n", x, y);
             scanf("%d", &r);
+            
             if(r == -1){
                 if(a==0 && e==0){
                     main();
-                }
-                else{
+                } else {
                     break;
                 }
-            }
-            else{
-                r == x/y ? acertou():errou();
+            } else {
+                r == x/y ? acertou() : errou();
             }
         }
         msgFinal(a,e);
         main();
-    }
-
-    else if(opcao==5){ //potenciacao
+    } else if (opcao == 5){ //potenciacao
         requerirDadosExc(&limite, &exerc);
-        for(i=0; i<exerc; i++){
+        
+        for (i = 0; i < exerc; i++){
             gerarNumsAleatorios(limite);
             printf("\n\nQual a potenciacao de %d com %d (para parar, digite -1)\n", x, y);
             scanf("%d", &r);
+            
             if(r == -1){
                 if(a==0 && e==0){
                     main();
-                }
-                else{
+                } else {
                     break;
                 }
             }
@@ -138,41 +132,39 @@ int main()
         }
         msgFinal(a,e);
         main();
-    }
-
-    else if(opcao==6){ //raiz quadrada
+    } else if (opcao == 6){ //raiz quadrada
         int racional = 0;
         requerirDadosExc(&limite, &exerc);
-        for(i=0; i<exerc; i++){
+        
+        for (i = 0; i < exerc; i++){
             racional = 0;
+            
             while(racional==0){
                 x = rand()%limite;
-                if(x!=0 && x!=1){
-                    if(sqrt(x) == floor(sqrt(x))){
+                
+                if(x != 0 && x != 1){
+                    if(sqrt(x) == floor(sqrt(x))) {
                         racional += x;
                     }
                 }
             }
             printf("\n\nQual a raiz quadrada de %d (para parar, digite -1)\n", racional);
             scanf("%d", &r);
-            if(r == -1){
-                if(a==0 && e==0){
+            
+            if(r == -1) {
+                if(a == 0 && e == 0) {
                     main();
-                }
-                else{
+                } else{
                     break;
                 }
-            }
-            else{
-                r == sqrt(racional) ? acertou():errou();
+            } else {
+                r == sqrt(racional) ? acertou() : errou();
             }
         }
 
         msgFinal(a,e);
         main();
-    }
-
-    else if(opcao==7){ //sair
+    } else if (opcao == 7){ //sair
         exit(0);
     }
 }
