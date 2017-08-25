@@ -6,16 +6,15 @@
 
 //Feito por Guilherme Vieira Rizzo - http://github.com/guivr - Favor manter creditos
 
-void requerirDadosExc(int *limite, int *exerc);
+void requerirDadosExc (int *limite, int *exerc);
 void gerarNumsAleatorios (int limite);
 void acertou ();
 void errou ();
-int msgFinal(int a, int e);
+int msgFinal (int a, int e);
 
 int a, e, x, y;
 
-int main()
-{
+int main () {
     int r, i, opcao, exerc, limite;
     a = e = limite = exerc = 0;
 
